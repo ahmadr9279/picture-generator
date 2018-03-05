@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Template</title>
+     <script
+  src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+ <script>
+     $(function(){
+         $('button').click(function(){
+        var ball= $("#ball").val()
+        $("p").html("It's playing with a "+ball+" ball!")
+        $("svg").css('fill', ball)
+        if(document.getElementById("forest").checked){
+         document.getElementById("pic").src="http://tiny.cc/170jry"}
+         else{document.getElementById("pic").src="http://tiny.cc/nmtkry"}
+         if(document.getElementById("cat").checked){
+          document.getElementById("yeah").src="http://tiny.cc/35tkry"}
+          else{document.getElementById("yeah").src="http://tiny.cc/94tkry"}
+
+         
+    
+         })
+     });
+ </script>
+
+  </head>
+  <body>
+   <form>
+   Background: <br>
+   Forest <input type="radio" id="forest" name="background" value=21 onClick="changeSrc()">
+   Desert <input type="radio" id="desert" name="background" value=21 onClick="changeSrc()"> <br>
+   Character: <br>
+   cat <input type= "radio" id="cat" name="character" value=7 onClick="changeSrc()">
+   dog <input type="radio" id="dog" name="character" value=3 onClick="changeSrc()">
+   </form>
+    
+     Ball color: <input id="ball"><br>
+     
+     <button>Generate Art!</button>
+    <p></p>
+    <svg height=500 width=500>
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" />
+</svg>
+<img src="" alt="background" id="pic" width="600px">
+<img src="" alt="character" id="yeah" width="600px">
+   
+  </body>
+</html>
